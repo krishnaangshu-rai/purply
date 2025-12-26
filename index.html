@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .Inter {
+        font-family: "Inter", cursive;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .instrument-serif-regular {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .instrument-serif-regular-italic {
+        font-family: "Instrument Serif", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Header -->
+      <section class="header py-2">
+        <nav class="max-w-[1008px] mx-auto flex justify-between items-center">
+          <div>
+            <img
+              class="logo"
+              src="images/logo.png"
+              height="14px"
+              width="28px"
+              alt=""
+            />
+          </div>
+
+          <div class="navLinks">
+            <ul class="flex gap-2 font-inter font-[16px]">
+              <li>Features</li>
+              <li>Benefits</li>
+              <li>Testimonials</li>
+              <li>FAQs</li>
+              <li>Pricing</li>
+            </ul>
+          </div>
+
+          <div class="templateBtn">
+            <button class="border p-2 rounded-lg shadow:md text-sm">
+              Get Template
+            </button>
+          </div>
+        </nav>
+      </section>
+    </div>
+
+    <!-- hero section -->
+    <section class="hero">
+      <!-- left content -->
+      <div class="text max-w-[642px] ml-[243px] mt-[43px]">
+        <div class="font-inter text-[14px] mb-[19px]">
+          <button class="text-sm text-white bg-purple-500 rounded-xl p-1">
+            New
+          </button>
+          <span>Business Intelligence</span>
+        </div>
+
+        <div class="font-inter font-bold text-6xl mb-[15px]">
+          <p>
+            Transform your <br />
+
+            <span class="serif-regular-italic">Data</span>
+            into<span class="inline-flex items-baseline"
+              ><img src="images/pyramid.png" class="w-20" alt="" srcset=""
+            /></span>
+            Scalable Actionable Solutions
+          </p>
+        </div>
+
+        <div class="max-w-[393px] text-[17px] font-inter mb-[35px]">
+          Unlock insights, drive decisions, and accelerate your business with
+          intelligent data solutions.
+        </div>
+
+        <div class="button-links mb-[43px]">
+          <button
+            class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200"
+          >
+            Get Template
+            <i class="inline" data-lucide="arrow-up-right"></i>
+          </button>
+
+          <button
+            class="bg-white text-black border border-gray-200 shadow-2xl p-2 rounded-md hover:bg-gray-200"
+          >
+            See Our Pricing
+          </button>
+        </div>
+
+        <div>
+          <p class="text-gray-500">Trusted by thousands</p>
+          <div class="flex items-center gap-1 mt-2 text-purple-400">
+            ★ ★ ★ ★ ★
+            <span class="text-gray-500">4,9</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute top-2 right-20 z-[-10]">
+        <img class="w-200" src="images/framer1.png" alt="" />
+      </div>
+    </section>
+
+    <!-- content -->
+    <section class="mt-[157px]">
+      <div class="relative max-w-[942px] mx-auto text-center">
+        <!-- Arc Background -->
+        <img src="images/Subtract.png" alt="" class="mx-auto w-[350px]" />
+
+        <!-- Content -->
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10"
+        >
+          <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">
+            Features
+          </button>
+
+          <div
+            class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center"
+          >
+            <h2 class="text-[54px] font-bold leading-tight mb-[23px]">
+              Unlock the Full Power of Your Platform
+            </h2>
+
+            <p
+              class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]"
+            >
+              Discover tools that elevate your performance and maximize growth
+              effortlessly
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-display max-w-[942px] mx-auto mt-15">
+        <!-- cards -->
+        <div class="cards grid grid-cols-9 gap-[16px] text-left">
+          <div
+            class="col-span-3 bg-white rounded-xl shadow-lg overflow-hidden w-[303px] p-4"
+          >
+            <!-- Image -->
+            <img
+              src="images/energyoptimization.png"
+              alt="Nature"
+              class="w-full h-48 object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Boost performance while reducing energy usage with smart systems
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-span-3 bg-white rounded-xl border-gray-200 shadow-lg overflow-hidden w-[303px] p-4"
+          >
+            <!-- Image -->
+            <img
+              src="images/instant.png"
+              alt="Nature"
+              class="w-full h-48 object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Boost performance while reducing energy usage with smart systems
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-span-3 bg-white rounded-xl shadow-lg overflow-hidden w-[303px] p-4"
+          >
+            <!-- Image -->
+            <img
+              src="images/integratedmeeting.png"
+              alt="Nature"
+              class="w-full h-48 object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Boost performance while reducing energy usage with smart systems
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-[11px] text-left mt-4">
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden w-[456px] p-4"
+          >
+            <!-- Image -->
+            <img
+              src="images/optimization.png"
+              alt="Nature"
+              class="w-full h-48 object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Boost performance while reducing energy usage with smart systems
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden w-[456px] p-4"
+          >
+            <!-- Image -->
+            <img
+              src="images/last.png"
+              alt="Nature"
+              class="w-full h-48 object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Boost performance while reducing energy usage with smart systems
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- info -->
+    <section class="mt-[111px]">
+      <div class="max-w-[675px] mx-auto text-center">
+        <div
+          class="flex items-center gap-1 mt-2 text-purple-400 text-[26px] justify-center"
+        >
+          ★ ★ ★ ★ ★
+        </div>
+        <p class="text-[56px] font-inter font-bold py-4">
+          “Finally, a Solution our
+          <span class="instrument-serif-">Entire team</span> Actually Uses.”
+        </p>
+
+        <div
+          class="profile max-w-[223px] mx-auto flex items-center gap-2 bg-white shadow-lg p-2 rounded-lg mt-[20px]"
+        >
+          <img src="images/profile.png" class="w-[37px]" alt="" />
+          <p>Peter Design - CEO</p>
+        </div>
+
+        <div class="mt-[56px]">
+          <p class="text-[16px]">Trusted by many companies</p>
+        </div>
+
+        <div class="mt-[29px]">
+          <ul
+            class="flex items-center gap-[66px] text-[20px] text-gray-400 font-semibold"
+          >
+            <li>Clonar Ai</li>
+            <li>Pulse Ai</li>
+            <li>Pulse</li>
+            <li>Pulse Ai</li>
+            <li>Pulse Ai</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- content 2  -->
+    <section class="mt-[157px]">
+      <div class="relative max-w-[942px] mx-auto text-center">
+        <!-- Arc Background -->
+        <img src="images/Subtract.png" alt="" class="mx-auto w-[350px]" />
+
+        <!-- Content -->
+        <div
+          class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10"
+        >
+          <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">
+            Benefits
+          </button>
+
+          <div
+            class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center"
+          >
+            <h2 class="text-[54px] font-bold leading-tight mb-[23px]">
+              See the Difference That Drives Growth
+            </h2>
+
+            <p
+              class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]"
+            >
+              Experience the real-world impact of smarter tools, faster
+              workflows, and effortless collaboration.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-display max-w-[942px] mx-auto mt-15">
+        <!-- cards -->
+        <div class="cards grid grid-cols-9 gap-[16px] text-left">
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/1.png" alt="" />
+            </div>
+
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/2.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/3.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/4.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/5.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/6.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/7.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/8.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+          >
+            <!-- numbering -->
+            <div class="absolute z-10 right-1">
+              <img class="h-[90px]" src="images/9.png" alt="" />
+            </div>
+            <!-- Image -->
+            <img
+              src="images/card1.png"
+              alt="Nature"
+              class="w-[36px] h-[36px] object-cover"
+            />
+
+            <!-- Content -->
+            <div class="">
+              <h2 class="text-xl font-semibold">Energy Optimization</h2>
+              <p class="text-gray-600 text-sm">
+                Improve every workflow with tools designed for efficiency and
+                speed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  -->
+    <section>
+      <div class="max-w-[756px] mx-auto">
+        <!-- left content -->
+        <div className="wrapper flex gap-2">
+          <div className="left-side h-full">
+            <p
+              class="text-2xl text-[linear-gradient(90deg,rgba(59,23,189,1)_0%,rgba(93,87,199,1)_50%,rgba(160,83,237,1)_100%)]"
+            >
+              01
+            </p>
+            <div className="line-wrapper h-full w-full">
+              <div
+                className="line h-full w-[8px] bg-[linear-gradient(90deg,rgba(59,23,189,1)_0%,rgba(93,87,199,1)_50%,rgba(160,83,237,1)_100%)]"
+              ></div>
+            </div>
+          </div>
+          <div className="right-side"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
