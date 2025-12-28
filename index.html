@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
@@ -17,15 +14,8 @@
         font-family: "Inter", cursive;
       }
     </style>
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
@@ -50,11 +40,30 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+      .answer.active {
+        max-height: 500px;
+        transition: max-height 0.3s ease-in;
+      }
+      .plus-icon {
+        transition: transform 0.3s ease;
+      }
+      .plus-icon.rotate {
+        transform: rotate(45deg);
+      }
+    </style>
   </head>
   <body>
     <div class="main">
       <!-- Header -->
-      <section class="header py-2">
+      <section
+        class="header py-[17.5px] sticky top-0 z-50 bg-white/30 backdrop-blur-lg shadow-sm"
+      >
         <nav class="max-w-[1008px] mx-auto flex justify-between items-center">
           <div>
             <img
@@ -77,492 +86,1383 @@
           </div>
 
           <div class="templateBtn">
-            <button class="border p-2 rounded-lg shadow:md text-sm">Get Template</button>
+            <button
+              class="border border-gray-200 p-2 rounded-lg shadow:xl text-sm"
+            >
+              Get Template
+            </button>
           </div>
         </nav>
       </section>
-    </div>
 
-    <!-- hero section -->
-    <section class="hero">
-      <!-- left content -->
-      <div class="text max-w-[642px] ml-[243px] mt-[43px]">
-        <div class="font-inter text-[14px] mb-[19px]">
-          <button class="text-sm text-white bg-purple-500 rounded-xl p-1">New</button>
-          <span>Business Intelligence</span>
+      <!-- hero section -->
+      <section class="hero">
+        <!-- left content -->
+        <div class="text max-w-[642px] ml-[243px] mt-[43px]">
+          <div class="font-inter text-[14px] mb-[19px]">
+            <button class="text-sm text-white bg-purple-500 rounded-xl p-1">
+              New
+            </button>
+            <span>Business Intelligence</span>
+          </div>
+
+          <div class="font-inter font-bold text-6xl mb-[15px]">
+            <p>
+              Transform your
+              <br />
+
+              <span class="serif-regular-italic">Data</span>
+              into
+              <span class="inline-flex items-baseline">
+                <img src="images/pyramid.png" class="w-20" alt="" srcset="" />
+              </span>
+              Scalable Actionable Solutions
+            </p>
+          </div>
+
+          <div class="max-w-[393px] text-[17px] font-inter mb-[35px]">
+            Unlock insights, drive decisions, and accelerate your business with
+            intelligent data solutions.
+          </div>
+
+          <div class="button-links mb-[43px]">
+            <button
+              class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200"
+            >
+              Get Template
+              <i class="inline" data-lucide="arrow-up-right"></i>
+            </button>
+
+            <button
+              class="bg-white text-black border border-gray-200 shadow-2xl p-2 rounded-md hover:bg-gray-200"
+            >
+              See Our Pricing
+            </button>
+          </div>
+
+          <div>
+            <p class="text-gray-500">Trusted by thousands</p>
+            <div class="flex items-center gap-1 mt-2 text-purple-400">
+              ★ ★ ★ ★ ★
+              <span class="text-gray-500">4,9</span>
+            </div>
+          </div>
         </div>
 
-        <div class="font-inter font-bold text-6xl mb-[15px]">
-          <p>
-            Transform your
-            <br />
+        <div class="absolute top-2 right-20 z-[-10]">
+          <img class="w-200" src="images/framer1.png" alt="" />
+        </div>
+      </section>
 
-            <span class="serif-regular-italic">Data</span>
-            into
-            <span class="inline-flex items-baseline">
+      <!-- content -->
+      <section class="mt-[157px]">
+        <div class="relative max-w-[942px] mx-auto text-center">
+          <!-- Arc Background -->
+          <img src="images/Subtract.png" alt="" class="mx-auto w-[350px]" />
+
+          <!-- Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10"
+          >
+            <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">
+              Features
+            </button>
+
+            <div
+              class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center"
+            >
+              <h2 class="text-[54px] font-bold leading-tight mb-[23px]">
+                Unlock the Full Power of Your Platform
+              </h2>
+
+              <p
+                class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]"
+              >
+                Discover tools that elevate your performance and maximize growth
+                effortlessly
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-display max-w-[942px] mx-auto mt-15">
+          <!-- cards -->
+          <div class="cards grid grid-cols-9 gap-[16px] text-left">
+            <div
+              class="col-span-3 bg-white rounded-xl shadow-lg overflow-hidden w-[303px] p-4"
+            >
+              <!-- Image -->
               <img
-                src="images/pyramid.png"
-                class="w-20"
+                src="images/energyoptimization.png"
+                alt="Nature"
+                class="w-full h-48 object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Boost performance while reducing energy usage with smart
+                  systems
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-span-3 bg-white rounded-xl border-gray-200 shadow-lg overflow-hidden w-[303px] p-4"
+            >
+              <!-- Image -->
+              <img
+                src="images/instant.png"
+                alt="Nature"
+                class="w-full h-48 object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Boost performance while reducing energy usage with smart
+                  systems
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-span-3 bg-white rounded-xl shadow-lg overflow-hidden w-[303px] p-4"
+            >
+              <!-- Image -->
+              <img
+                src="images/integratedmeeting.png"
+                alt="Nature"
+                class="w-full h-48 object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Boost performance while reducing energy usage with smart
+                  systems
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-[11px] text-left mt-4">
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden w-[456px] p-4"
+            >
+              <!-- Image -->
+              <img
+                src="images/optimization.png"
+                alt="Nature"
+                class="w-full h-48 object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Boost performance while reducing energy usage with smart
+                  systems
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden w-[456px] p-4"
+            >
+              <!-- Image -->
+              <img
+                src="images/last.png"
+                alt="Nature"
+                class="w-full h-48 object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Boost performance while reducing energy usage with smart
+                  systems
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- info -->
+      <section class="mt-[111px]">
+        <div class="max-w-[675px] mx-auto text-center">
+          <div
+            class="flex items-center gap-1 mt-2 text-purple-400 text-[26px] justify-center"
+          >
+            ★ ★ ★ ★ ★
+          </div>
+          <p class="text-[56px] font-inter font-bold py-4">
+            “Finally, a Solution our
+            <span class="instrument-serif-">Entire team</span>
+            Actually Uses.”
+          </p>
+
+          <div
+            class="profile max-w-[223px] mx-auto flex items-center gap-2 bg-white shadow-lg p-2 rounded-lg mt-[20px]"
+          >
+            <img src="images/profile.png" class="w-[37px]" alt="" />
+            <p>Peter Design - CEO</p>
+          </div>
+
+          <div class="mt-[56px]">
+            <p class="text-[16px]">Trusted by many companies</p>
+          </div>
+
+          <div class="mt-[29px]">
+            <ul
+              class="flex items-center gap-[66px] text-[20px] text-gray-400 font-semibold"
+            >
+              <li>Clonar Ai</li>
+              <li>Pulse Ai</li>
+              <li>Pulse</li>
+              <li>Pulse Ai</li>
+              <li>Pulse Ai</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- content 2  -->
+      <section class="mt-[157px]">
+        <div class="relative max-w-[942px] mx-auto text-center">
+          <!-- Arc Background -->
+          <img src="images/Subtract.png" alt="" class="mx-auto w-[350px]" />
+
+          <!-- Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10"
+          >
+            <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">
+              Benefits
+            </button>
+
+            <div
+              class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center"
+            >
+              <h2 class="text-[54px] font-bold leading-tight mb-[23px]">
+                See the Difference That Drives Growth
+              </h2>
+
+              <p
+                class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]"
+              >
+                Experience the real-world impact of smarter tools, faster
+                workflows, and effortless collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-display max-w-[942px] mx-auto mt-15">
+          <!-- cards -->
+          <div class="cards grid grid-cols-9 gap-[16px] text-left">
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/1.png" alt="" />
+              </div>
+
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/2.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/3.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/4.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/5.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/6.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/7.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/8.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]"
+            >
+              <!-- numbering -->
+              <div class="absolute z-10 right-1">
+                <img class="h-[90px]" src="images/9.png" alt="" />
+              </div>
+              <!-- Image -->
+              <img
+                src="images/card1.png"
+                alt="Nature"
+                class="w-[36px] h-[36px] object-cover"
+              />
+
+              <!-- Content -->
+              <div class="">
+                <h2 class="text-xl font-semibold">Energy Optimization</h2>
+                <p class="text-gray-600 text-sm">
+                  Improve every workflow with tools designed for efficiency and
+                  speed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- framer -->
+      <section class="mt-[145px]">
+        <div class="container max-w-[756px] mx-auto">
+          <div class="point-1 flex gap-[52px] mb-[20px]">
+            <div class="left-side text-[52px] overflow-y-hidden shrink-0">
+              <p class="text-purple-600">01</p>
+              <div class="line-wrapper w-full h-[100%]">
+                <div class="line w-[12px] h-full bg-purple-600 ml-auto"></div>
+              </div>
+            </div>
+            <div class="right-side pb-[150px]">
+              <button
+                class="text-white p-1 bg-purple-600 hover:bg-purple-200 rounded-xl"
+              >
+                Data sources
+              </button>
+              <h2 class="text-[56px] font-bold font-inter">
+                Connect Your Data
+              </h2>
+              <p class="leading-tight mb-[16px]">
+                Seamlessly integrate all your key data sources whether it's
+                databases spreadsheets APIs or third party tools using our
+                intuitive no code connectors. You can unify structured and
+                unstructured data with minimal setup ensuring every decision
+                starts with a complete picture.
+              </p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200"
+              >
+                Get Template
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="point-1 flex gap-[52px] mb-[20px]">
+            <div class="left-side text-[52px] overflow-y-hidden shrink-0">
+              <p class="text-purple-600">02</p>
+              <div class="line-wrapper w-full h-[100%]">
+                <div class="line w-[12px] h-full bg-purple-600 ml-auto"></div>
+              </div>
+            </div>
+            <div class="right-side pb-[150px]">
+              <button
+                class="text-white p-1 bg-purple-600 hover:bg-purple-200 rounded-xl"
+              >
+                Smart Cleaning
+              </button>
+              <h2 class="text-[56px] font-bold font-inter">Clean Instantly</h2>
+              <p class="leading-tight mb-[16px]">
+                Seamlessly integrate all your key data sources whether it's
+                databases spreadsheets APIs or third party tools using our
+                intuitive no code connectors. You can unify structured and
+                unstructured data with minimal setup ensuring every decision
+                starts with a complete picture.
+              </p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200"
+              >
+                Get Template
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="point-1 flex gap-[52px] mb-[20px]">
+            <div class="left-side text-[52px] overflow-y-hidden shrink-0">
+              <p class="text-purple-600">03</p>
+              <div class="line-wrapper w-full h-[100%]">
+                <div class="line w-[12px] h-full bg-purple-600 ml-auto"></div>
+              </div>
+            </div>
+            <div class="right-side pb-[150px]">
+              <button
+                class="text-white p-1 bg-purple-600 hover:bg-purple-200 rounded-xl"
+              >
+                Data sources
+              </button>
+              <h2 class="text-[56px] font-bold font-inter">
+                Visualize with Purpose
+              </h2>
+              <p class="leading-tight mb-[16px]">
+                Seamlessly integrate all your key data sources whether it's
+                databases spreadsheets APIs or third party tools using our
+                intuitive no code connectors. You can unify structured and
+                unstructured data with minimal setup ensuring every decision
+                starts with a complete picture.
+              </p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200"
+              >
+                Get Template
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="point-1 flex gap-[52px] mb-[20px]">
+            <div class="left-side text-[52px] overflow-y-hidden shrink-0">
+              <p class="text-purple-600">04</p>
+              <div class="line-wrapper w-full h-[100%]">
+                <div class="line w-[12px] h-full bg-purple-600 ml-auto"></div>
+              </div>
+            </div>
+            <div class="right-side pb-[150px]">
+              <button
+                class="text-white p-1 bg-purple-600 hover:bg-purple-200 rounded-xl"
+              >
+                Data sources
+              </button>
+              <h2 class="text-[56px] font-bold font-inter">
+                Collaborate in Teams
+              </h2>
+              <p class="leading-tight mb-[16px]">
+                Seamlessly integrate all your key data sources whether it's
+                databases spreadsheets APIs or third party tools using our
+                intuitive no code connectors. You can unify structured and
+                unstructured data with minimal setup ensuring every decision
+                starts with a complete picture.
+              </p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200"
+              >
+                Get Template
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="point-1 flex gap-[52px] mb-[20px]">
+            <div class="left-side text-[52px] overflow-y-hidden shrink-0">
+              <p class="text-purple-600">05</p>
+            </div>
+            <div class="right-side pb-[150px]">
+              <button
+                class="text-white p-1 bg-purple-600 hover:bg-purple-200 rounded-xl"
+              >
+                Data sources
+              </button>
+              <h2 class="text-[56px] font-bold font-inter">
+                Act your insights
+              </h2>
+              <p class="leading-tight mb-[16px]">
+                Seamlessly integrate all your key data sources whether it's
+                databases spreadsheets APIs or third party tools using our
+                intuitive no code connectors. You can unify structured and
+                unstructured data with minimal setup ensuring every decision
+                starts with a complete picture.
+              </p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200"
+              >
+                Get Template
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="mt-[157px]">
+        <div class="relative max-w-[942px] mx-auto text-center">
+          <!-- Arc Background -->
+          <img src="images/Subtract.png" alt="" class="mx-auto w-[350px]" />
+
+          <!-- Content -->
+
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10 mb-[28px]"
+          >
+            <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">
+              Testimonials
+            </button>
+
+            <div
+              class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center"
+            >
+              <h2 class="text-[54px] font-bold leading-tight mb-[23px]">
+                Here’s What Others Say About US
+              </h2>
+
+              <p
+                class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]"
+              >
+                Experience the real-world impact of smarter tools, faster
+                workflows, and effortless collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- forms -->
+        <div class="forms-wrapper max-w-[942px] mx-auto">
+          <div class="bg-white rounded-lg shadow-xl p-[18px] mb-[55px]">
+            <div class="flex items-center gap-2">
+              <div>
+                <img
+                  src="images/form.png"
+                  class="h-[58px] w-[58px]"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div>
+                <p>Lena T.</p>
+                <p class="text-gray-500">Growth leader</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-1 mt-2 text-purple-600">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <p>
+              It simplfied our entire workflow and let us focus on growing the
+              business instead of chasing reports.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-[18px] mb-[55px]">
+            <div class="flex items-center gap-2">
+              <div>
+                <img
+                  src="images/form.png"
+                  class="h-[58px] w-[58px]"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div>
+                <p>Lena T.</p>
+                <p class="text-gray-500">Growth leader</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-1 mt-2 text-purple-600">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <p>
+              It simplfied our entire workflow and let us focus on growing the
+              business instead of chasing reports.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-[18px] mb-[55px]">
+            <div class="flex items-center gap-2">
+              <div>
+                <img
+                  src="images/form.png"
+                  class="h-[58px] w-[58px]"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <div>
+                <p>Lena T.</p>
+                <p class="text-gray-500">Growth leader</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-1 mt-2 text-purple-600">
+              ★ ★ ★ ★ ★
+            </div>
+
+            <p>
+              It simplfied our entire workflow and let us focus on growing the
+              business instead of chasing reports.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Faqs -->
+      <section class="mt-[143px]">
+        <div class="relative max-w-[942px] mx-auto text-center">
+          <!-- Arc Background -->
+          <img src="images/Subtract.png" alt="" class="mx-auto w-[350px]" />
+
+          <!-- Content -->
+
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10 mb-[28px]"
+          >
+            <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">
+              FAQs
+            </button>
+
+            <div
+              class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center"
+            >
+              <h2 class="text-[54px] font-bold leading-tight mb-[23px]">
+                Answer The Most Answered Questions
+              </h2>
+
+              <p
+                class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]"
+              >
+                Experience the real-world impact of smarter tools, faster
+                workflows, and effortless collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- faqs -->
+        <div class="max-w-[920px] mx-auto mt-10">
+          <div class="space-y-4">
+            <!-- faq 1 -->
+            <div
+              class="group bg-white rounded-lg shadow-sm border-l-4 border-transparent hover:border-purple-600 transition-all duration-300"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+              >
+                <span class="text-gray-800 text-lg font-normal"
+                  >How does the platform help me make better decisions?</span
+                >
+                <span class="plus-icon text-gray-400 text-2xl font-light"
+                  >+</span
+                >
+              </button>
+              <div class="answer px-6">
+                <div class="pb-5 pt-2 text-gray-600">
+                  <p>Yes the platform helps you make better decisions</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- faq 2 -->
+            <div
+              class="group bg-white rounded-lg shadow-sm border-l-4 border-transparent hover:border-purple-600 transition-all duration-300"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+              >
+                <span class="text-gray-800 text-lg font-normal"
+                  >Is it easy to integrate with my existing tools?</span
+                >
+                <span class="plus-icon text-gray-400 text-2xl font-light"
+                  >+</span
+                >
+              </button>
+              <div class="answer px-6">
+                <div class="pb-5 pt-2 text-gray-600">
+                  <p>Yes! it easy to integrate with my existing tools</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- faq 3 -->
+            <div
+              class="group bg-white rounded-lg shadow-sm border-l-4 border-transparent hover:border-purple-600 transition-all duration-300"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+              >
+                <span class="text-gray-800 text-lg font-normal"
+                  >Do i need technical skills to use this platform?</span
+                >
+                <span class="plus-icon text-gray-400 text-2xl font-light"
+                  >+</span
+                >
+              </button>
+              <div class="answer px-6">
+                <div class="pb-5 pt-2 text-gray-600">
+                  <p>Not at all!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- faq 4 -->
+            <div
+              class="group bg-white rounded-lg shadow-sm border-l-4 border-transparent hover:border-purple-600 transition-all duration-300"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+              >
+                <span class="text-gray-800 text-lg font-normal"
+                  >How quickly can i start seeing results?</span
+                >
+                <span class="plus-icon text-gray-400 text-2xl font-light"
+                  >+</span
+                >
+              </button>
+              <div class="answer px-6">
+                <div class="pb-5 pt-2 text-gray-600">
+                  <p>
+                    Most users see initial results within the first week of
+                    implementation
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div
+              class="group bg-white rounded-lg shadow-sm border-l-4 border-transparent hover:border-purple-600 transition-all duration-300"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+              >
+                <span class="text-gray-800 text-lg font-normal"
+                  >Is my data safe and secure?</span
+                >
+                <span class="plus-icon text-gray-400 text-2xl font-light"
+                  >+</span
+                >
+              </button>
+              <div class="answer px-6">
+                <div class="pb-5 pt-2 text-gray-600">
+                  <p>Absolutely.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div
+              class="group bg-white rounded-lg shadow-sm border-l-4 border-transparent hover:border-purple-600 transition-all duration-300"
+            >
+              <button
+                onclick="toggleFaq(this)"
+                class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+              >
+                <span class="text-gray-800 text-lg font-normal"
+                  >Can i customize the dashboards and reports?</span
+                >
+                <span class="plus-icon text-gray-400 text-2xl font-light"
+                  >+</span
+                >
+              </button>
+              <div class="answer px-6">
+                <div class="pb-5 pt-2 text-gray-600">
+                  <p>Yes, full customization is available!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- info -->
+      <section class="mt-[180px]">
+        <div class="max-w-[920px] mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <!-- Purply Card -->
+            <div
+              class="p-4 rounded-3xl bg-gradient-to-r from-purple-400 via-indigo-500 to-purple-600"
+            >
+              <div class="bg-white rounded-2xl p-2">
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="bg-purple-100 rounded-lg p-2">
+                    <img src="images/logo.png" width="40px" alt="" />
+                  </div>
+                  <h2 class="text-2xl font-semibold">Purply</h2>
+                </div>
+
+                <ul class="space-y-4 text-gray-700">
+                  <li class="flex gap-3 items-start">
+                    <span
+                      class="text-purple-600 text-[14px] border-b border-gray-200"
+                      >✓</span
+                    >
+                    <span
+                      >We turn complex data into simple, scalable actions.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <span
+                      class="text-purple-600 text-[14px] border-b border-gray-200"
+                      >✓</span
+                    >
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Others Card -->
+            <div
+              class="p-4 rounded-3xl bg-gradient-to-r from-gray-100 via-fuchsia-100 to-gray-100"
+            >
+              <div class="bg-white rounded-2xl p-2">
+                <h2 class="text-2xl font-semibold mb-6">Others</h2>
+
+                <ul class="space-y-4 text-gray-700">
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >We turn complex data into simple, scalable actions.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                  <li class="flex gap-3 items-start border-b border-gray-200">
+                    <span class="text-purple-600 text-[14px]">✓</span>
+                    <span
+                      >Our platform delivers insights you can act on
+                      instantly.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- pay plan -->
+      <section class="mt-[122px]">
+        <div class="relative max-w-[942px] mx-auto text-center overflow-hidden">
+          <!-- Arc Background -->
+          <img src="images/Subtract.png" alt="" class="mx-auto w-[350px]" />
+
+          <!-- Content -->
+
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10 mb-[28px]"
+          >
+            <button
+              class="mt-6 border border-gray-300 rounded-lg px-2 py-1 text-sm"
+            >
+              Testimonials
+            </button>
+
+            <div
+              class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center"
+            >
+              <h2 class="text-[56px] font-bold leading-tight mb-[23px]">
+                Choose the Right Plan for Your Goals
+              </h2>
+
+              <p
+                class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]"
+              >
+                Experience the real-world impact of smarter tools, faster
+                workflows, and effortless collaboration.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- toggle switch -->
+        <div
+          class="max-w-[942px] mx-auto flex items-center justify-center gap-4 mt-20"
+        >
+          <!-- Monthly Button -->
+          <div
+            class="px-8 py-3 rounded-2xl text-lg font-medium bg-gradient-to-r from-purple-500 to-purple-600 text-white shadow-md"
+          >
+            Monthly
+          </div>
+
+          <!-- Toggle Switch -->
+          <div
+            class="relative w-32 h-14 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 border-2 border-gray-300 shadow-inner"
+          >
+            <div
+              class="absolute top-1 left-1 w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full shadow-lg"
+            ></div>
+          </div>
+
+          <!-- Yearly Text -->
+          <div class="text-lg font-normal text-gray-800">Yearly (-20%)</div>
+        </div>
+
+        <!-- plan cards -->
+        <div class="max-w-[1070px] mx-auto mt-[33px]">
+          <div class="grid grid-cols-9 gap-4">
+            <div
+              class="col-span-3 pt-[28px] pb-[45px] px-[16px] border border-gray-200 shadow-xl rounded-xl"
+            >
+              <h2 class="font-bold text-[24px]">Basic Plan</h2>
+              <p class="border-b border-gray-300 pb-[17px]">
+                Ideal for getting started.
+              </p>
+              <h2 class="font-bold text-[24px] mt-[17px]">$49</h2>
+              <p class="">Monthly subscription</p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200 w-full mt-[27px]"
+              >
+                Get Started
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+              <h3 class="mt-[27px]">Includes:</h3>
+              <ul class="text-gray-600">
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Team collaboration</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Unlimited dashboards</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Up to 1M data rows/month</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Custom KPIs & advanced filters</span>
+                </li>
+              </ul>
+
+              <p class="text-[14px] text-gray-300 mt-[33px]">
+                You can easily cancel anytime.
+              </p>
+            </div>
+
+            <div
+              class="relative col-span-3 pt-[28px] pb-[45px] px-[16px] border border-gray-200 shadow-xl rounded-xl overflow-hidden"
+            >
+              <img
+                class="absolute z-[-10] right-0 top-0"
+                width="200px"
+                src="images/framer 2.png"
                 alt=""
                 srcset=""
               />
-            </span>
-            Scalable Actionable Solutions
-          </p>
-        </div>
+              <h2 class="font-bold text-[24px]">Pro Plan</h2>
+              <p class="border-b border-gray-300 pb-[17px]">
+                Perfect for buisnesses.
+              </p>
+              <h2 class="font-bold text-[24px] mt-[17px]">$129</h2>
+              <p class="">Monthly subscription</p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200 w-full mt-[27px]"
+              >
+                Get Started
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+              <h3 class="mt-[27px]">Includes:</h3>
+              <ul class="text-gray-600">
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Team collaboration</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Unlimited dashboards</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Up to 1M data rows/month</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Custom KPIs & advanced filters</span>
+                </li>
+              </ul>
 
-        <div class="max-w-[393px] text-[17px] font-inter mb-[35px]">Unlock insights, drive decisions, and accelerate your business with intelligent data solutions.</div>
-
-        <div class="button-links mb-[43px]">
-          <button class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200">
-            Get Template
-            <i
-              class="inline"
-              data-lucide="arrow-up-right"
-            ></i>
-          </button>
-
-          <button class="bg-white text-black border border-gray-200 shadow-2xl p-2 rounded-md hover:bg-gray-200">See Our Pricing</button>
-        </div>
-
-        <div>
-          <p class="text-gray-500">Trusted by thousands</p>
-          <div class="flex items-center gap-1 mt-2 text-purple-400">
-            ★ ★ ★ ★ ★
-            <span class="text-gray-500">4,9</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="absolute top-2 right-20 z-[-10]">
-        <img
-          class="w-200"
-          src="images/framer1.png"
-          alt=""
-        />
-      </div>
-    </section>
-
-    <!-- content -->
-    <section class="mt-[157px]">
-      <div class="relative max-w-[942px] mx-auto text-center">
-        <!-- Arc Background -->
-        <img
-          src="images/Subtract.png"
-          alt=""
-          class="mx-auto w-[350px]"
-        />
-
-        <!-- Content -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10">
-          <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">Features</button>
-
-          <div class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center">
-            <h2 class="text-[54px] font-bold leading-tight mb-[23px]">Unlock the Full Power of Your Platform</h2>
-
-            <p class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]">Discover tools that elevate your performance and maximize growth effortlessly</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-display max-w-[942px] mx-auto mt-15">
-        <!-- cards -->
-        <div class="cards grid grid-cols-9 gap-[16px] text-left">
-          <div class="col-span-3 bg-white rounded-xl shadow-lg overflow-hidden w-[303px] p-4">
-            <!-- Image -->
-            <img
-              src="images/energyoptimization.png"
-              alt="Nature"
-              class="w-full h-48 object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Boost performance while reducing energy usage with smart systems</p>
+              <p class="text-[14px] text-gray-300 mt-[33px]">
+                You can easily cancel anytime.
+              </p>
             </div>
-          </div>
 
-          <div class="col-span-3 bg-white rounded-xl border-gray-200 shadow-lg overflow-hidden w-[303px] p-4">
-            <!-- Image -->
-            <img
-              src="images/instant.png"
-              alt="Nature"
-              class="w-full h-48 object-cover"
-            />
+            <div
+              class="col-span-3 pt-[28px] pb-[45px] px-[16px] border border-gray-200 shadow-xl rounded-xl"
+            >
+              <h2 class="font-bold text-[24px]">Business Pro Plan</h2>
+              <p class="border-b border-gray-300 pb-[17px]">Built to scale.</p>
+              <h2 class="font-bold text-[24px] mt-[17px]">$185</h2>
+              <p class="">Monthly subscription</p>
+              <button
+                class="bg-black text-white p-2 shadow-2xl rounded-md hover:bg-gray-200 w-full mt-[27px]"
+              >
+                Get Started
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
+              <h3 class="mt-[27px]">Includes:</h3>
+              <ul class="text-gray-600">
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Team collaboration</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Unlimited dashboards</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Up to 1M data rows/month</span>
+                </li>
+                <li class="flex gap-3 items-start">
+                  <span class="text-gray-400 text-[14px]">✓</span>
+                  <span>Custom KPIs & advanced filters</span>
+                </li>
+              </ul>
 
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Boost performance while reducing energy usage with smart systems</p>
-            </div>
-          </div>
-
-          <div class="col-span-3 bg-white rounded-xl shadow-lg overflow-hidden w-[303px] p-4">
-            <!-- Image -->
-            <img
-              src="images/integratedmeeting.png"
-              alt="Nature"
-              class="w-full h-48 object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Boost performance while reducing energy usage with smart systems</p>
+              <p class="text-[14px] text-gray-300 mt-[33px]">
+                You can easily cancel anytime.
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="grid grid-cols-2 gap-[11px] text-left mt-4">
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden w-[456px] p-4">
-            <!-- Image -->
-            <img
-              src="images/optimization.png"
-              alt="Nature"
-              class="w-full h-48 object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Boost performance while reducing energy usage with smart systems</p>
+      <!-- join newsletter -->
+      <section class="mt-[110px]">
+        <div
+          class="relative max-w-[1070px] mx-auto pt-[96px] rounded-3xl bg-[#6046ff] shadow-[inset_0_0_40px_rgba(192,132,252,0.90)] mb-[140px] overflow-hidden"
+        >
+          <div class="max-w-[578px] mx-auto text-white p-2">
+            <p class="text-[60px] font-bold">
+              Join Our Newsletter and Stay Updated
+            </p>
+            <div
+              class="max-w-[371px] mx-auto flex flex-col items-center pb-[152px]"
+            >
+              <p class="text-center">
+                Get the latest insights, updates, and strategies delivered to
+                your inbox
+              </p>
+              <button
+                class="bg-black text-white py-2 px-3 shadow-2xl rounded-md hover:bg-gray-200 mt-[12px]"
+              >
+                Join Newsletter
+                <i class="inline" data-lucide="arrow-up-right"></i>
+              </button>
             </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden w-[456px] p-4">
-            <!-- Image -->
             <img
-              src="images/last.png"
-              alt="Nature"
-              class="w-full h-48 object-cover"
+              class="absolute left-0 bottom-0"
+              width="400px"
+              src="images/envelope1.png"
+              alt=""
+              srcset=""
             />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Boost performance while reducing energy usage with smart systems</p>
-            </div>
+            <img
+              class="absolute right-0 bottom-0"
+              width="400px"
+              src="images/envelope2.png"
+              alt=""
+              srcset=""
+            />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- info -->
-    <section class="mt-[111px]">
-      <div class="max-w-[675px] mx-auto text-center">
-        <div class="flex items-center gap-1 mt-2 text-purple-400 text-[26px] justify-center">★ ★ ★ ★ ★</div>
-        <p class="text-[56px] font-inter font-bold py-4">
-          “Finally, a Solution our
-          <span class="instrument-serif-">Entire team</span>
-          Actually Uses.”
-        </p>
+      <!-- pre footer -->
+      <section>
+        <div class="max-w-[616px] mx-auto grid grid-cols-12 gap-3">
+          <div class="col-span-6">
+            <div
+              class="flex items-center gap-2 pb-[16px] border-b border-gray-200"
+            >
+              <div class="border border-gray-200 shadow-lg rounded-lg p-3">
+                <img src="images/logo.png" width="40px" alt="" srcset="" />
+              </div>
+              <h3 class="text-semibold text-2xl">Purply</h3>
+            </div>
+            <p>
+              Unlock insights, drive decisions, and accelerate your business
+              with intelligent data solutions.
+            </p>
+            <button
+              class="mt-[20px] py-2 px-3 border border-gray-200 rounded-lg"
+            >
+              Get Template For Free
+            </button>
+          </div>
 
-        <div class="profile max-w-[223px] mx-auto flex items-center gap-2 bg-white shadow-lg p-2 rounded-lg mt-[20px]">
+          <div class="col-span-2">
+            <h3 class="font-semibold">Navigation</h3>
+            <ul>
+              <li>Features</li>
+              <li>Benefits</li>
+              <li>Testimonials</li>
+              <li>FAQs</li>
+              <li>Pricing</li>
+            </ul>
+          </div>
+
+          <div class="col-span-2">
+            <h3 class="font-semibold">Socials</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
+
+          <div class="col-span-2">
+            <h3 class="font-semibold">Pages</h3>
+            <ul>
+              <li>Newsletter</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <section class="mt[152px]">
+        <div class="relative overflow-hidden">
           <img
-            src="images/profile.png"
-            class="w-[37px]"
+            class="absolute z-[-10]"
+            src="images/footerbanner.png"
             alt=""
+            srcset=""
           />
-          <p>Peter Design - CEO</p>
-        </div>
-
-        <div class="mt-[56px]">
-          <p class="text-[16px]">Trusted by many companies</p>
-        </div>
-
-        <div class="mt-[29px]">
-          <ul class="flex items-center gap-[66px] text-[20px] text-gray-400 font-semibold">
-            <li>Clonar Ai</li>
-            <li>Pulse Ai</li>
-            <li>Pulse</li>
-            <li>Pulse Ai</li>
-            <li>Pulse Ai</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- content 2  -->
-    <section class="mt-[157px]">
-      <div class="relative max-w-[942px] mx-auto text-center">
-        <!-- Arc Background -->
-        <img
-          src="images/Subtract.png"
-          alt=""
-          class="mx-auto w-[350px]"
-        />
-
-        <!-- Content -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center gap-10 mt-30 z-10">
-          <button class="border border-gray-300 rounded-lg px-2 py-1 text-sm">Benefits</button>
-
-          <div class="max-w-[645px] mx-auto bg-white shadow-white shadow-[0_-10px_30px_rgba(0,0,0,0.15)] text-center">
-            <h2 class="text-[54px] font-bold leading-tight mb-[23px]">See the Difference That Drives Growth</h2>
-
-            <p class="text-gray-600 mt-4 text-[16px] max-w-[395px] mx-auto pb-[39px]">Experience the real-world impact of smarter tools, faster workflows, and effortless collaboration.</p>
+          <div class="max-w-[665px] mx-auto">
+            <h1 class="text-[180px] font-bold text-[#EBEAFF]">PURPLY</h1>
+          </div>
+          <div
+            class="flex items-center justify-between px-[400px] border-t border-gray-500 py-2 text-white"
+          >
+            <p>All rights reserved. &copy; 2025</p>
+            <p>By ItsPeterDesign</p>
           </div>
         </div>
-      </div>
+      </section>
+    </div>
 
-      <div class="card-display max-w-[942px] mx-auto mt-15">
-        <!-- cards -->
-        <div class="cards grid grid-cols-9 gap-[16px] text-left">
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/1.png"
-                alt=""
-              />
-            </div>
+    <script>
+      function toggleFaq(button) {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector(".plus-icon");
 
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
+        // yesle chai answers haru initially hide garcha
+        document.querySelectorAll(".answer").forEach((item) => {
+          if (item !== answer && item.classList.contains("active")) {
+            item.classList.remove("active");
+            item.previousElementSibling
+              .querySelector(".plus-icon")
+              .classList.remove("rotate");
+          }
+        });
+        // faq lai toogle garnu
+        answer.classList.toggle("active");
+        icon.classList.toggle("rotate");
+      }
+    </script>
 
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/2.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/3.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/4.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/5.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/6.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/7.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/8.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-
-          <div class="relative col-span-3 bg-white rounded-xl shadow-lg overflow-hidden p-[16px]">
-            <!-- numbering -->
-            <div class="absolute z-10 right-1">
-              <img
-                class="h-[90px]"
-                src="images/9.png"
-                alt=""
-              />
-            </div>
-            <!-- Image -->
-            <img
-              src="images/card1.png"
-              alt="Nature"
-              class="w-[36px] h-[36px] object-cover"
-            />
-
-            <!-- Content -->
-            <div class="">
-              <h2 class="text-xl font-semibold">Energy Optimization</h2>
-              <p class="text-gray-600 text-sm">Improve every workflow with tools designed for efficiency and speed.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--  -->
-    <section>
-      <div class="max-w-[756px] mx-auto">
-        <!-- left content -->
-        <div className="wrapper flex gap-2">
-          <div className="left-side h-full">
-            <p class="text-2xl text-[linear-gradient(90deg,rgba(59,23,189,1)_0%,rgba(93,87,199,1)_50%,rgba(160,83,237,1)_100%)]">01</p>
-            <div className="line-wrapper h-full w-full">
-              <div className="line h-full w-[8px] bg-[linear-gradient(90deg,rgba(59,23,189,1)_0%,rgba(93,87,199,1)_50%,rgba(160,83,237,1)_100%)]"></div>
-            </div>
-          </div>
-          <div className="right-side"></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container max-w-[756px] mx-auto">
-        <div class="point-1 flex gap-[52px] mb-[20px]">
-          <div class="left-side text-[52px] overflow-y-hidden shrink-0">
-            <p>01</p>
-            <div class="line-wrapper w-full h-[100%]">
-              <div class="line w-[12px] h-full bg-black ml-auto"></div>
-            </div>
-          </div>
-          <div class="right-side">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex ea consequatur? Aut ea saepe dolorem, nulla debitis omnis culpa quos. Optio eos velit corporis neque, non nemo architecto ipsa laudantium, at vel eum aliquam sequi! Velit, porro qui explicabo numquam animi illo eum rerum ea ipsam neque magni blanditiis ab vero quas saepe ut mollitia veniam dolore. Laborum temporibus earum autem in eos architecto est maxime porro tenetur nihil voluptas alias vel veritatis ab eum optio odio, repudiandae nulla molestias magnam cupiditate, quae esse. Ad exercitationem, cum porro qui aut, nam minima odit amet dolore consequuntur eveniet quidem velit explicabo! Ea incidunt deleniti repellat eaque quidem eveniet quisquam. Nulla fuga commodi fugiat totam cupiditate corporis necessitatibus qui laborum enim, rem facilis odit, minima eaque autem nobis magnam a sunt. Iste laborum a recusandae ea consectetur illum suscipit corporis ab, ullam praesentium pariatur quisquam itaque hic officiis magni dolore. Similique, dolorum deleniti! Ullam quam corporis voluptas consequuntur odio aliquam dolores harum quod enim natus commodi tempora fugit eos atque neque, voluptates ad assumenda porro iusto rerum sed sit nam! Numquam exercitationem facilis, officiis maxime et cumque molestias assumenda dolore, adipisci autem maiores doloremque tempora doloribus sequi architecto dolorum! Dignissimos quae culpa, saepe cupiditate quaerat amet recusandae nulla officiis sit quia eveniet maxime natus itaque dolorem, totam nisi atque cum debitis doloribus voluptas consectetur vitae esse nemo. Illo corrupti amet aliquam fuga iusto blanditiis officia dolores. Cum deleniti architecto nesciunt dolorem unde! Distinctio dolor minima harum ducimus voluptate et voluptates unde modi labore! Ea saepe possimus temporibus odio commodi repellendus nulla provident ex cupiditate, est quisquam doloribus ullam sint dolore, velit sed voluptates voluptatum pariatur suscipit laboriosam repudiandae qui. Nesciunt
-            laudantium quis distinctio nostrum, tenetur blanditiis? Temporibus fugit adipisci ipsum ab veritatis quas excepturi iure! Temporibus exercitationem esse sit quisquam est molestiae corporis doloribus, tempore perferendis? Sit earum ipsum magnam molestiae! Ea explicabo possimus repellendus provident molestias dolor inventore consequuntur suscipit nulla nisi fugiat perferendis minus odio dolorem eos quas modi doloremque, optio quam officia natus. Modi dolores repellendus error perspiciatis adipisci rerum voluptate eaque sint, quia ipsam voluptatum autem, explicabo, quos odio. Adipisci voluptatem officiis debitis animi iure quibusdam aut? Magnam, dignissimos omnis beatae possimus quo perferendis quos porro culpa sequi eligendi? Laborum exercitationem possimus beatae, sequi quas et blanditiis doloribus voluptas iusto reiciendis similique aut excepturi magni molestiae minus consectetur itaque? Optio, molestias, suscipit, porro quo aspernatur vero fugit ratione explicabo magnam qui quasi animi esse voluptates iure! Veritatis, sequi! Sit nostrum ipsa odio quidem dolor. Rem autem cupiditate aut ipsum nesciunt earum ratione vero vitae aliquam! Minima suscipit impedit magnam aperiam vitae numquam voluptate. Optio aspernatur eum nam ipsam suscipit est nisi! Officia, aliquid iste, quidem modi labore pariatur temporibus error debitis saepe ipsam incidunt, in mollitia dolorem voluptas? Perspiciatis sed nostrum, quasi voluptatum eum veniam autem. Necessitatibus assumenda aut, velit voluptatum suscipit qui soluta alias! Sunt id eveniet unde nostrum voluptatibus nisi dignissimos aliquam dolores dolorum ducimus. Adipisci sequi excepturi veniam beatae recusandae eligendi obcaecati, aliquid soluta.
-          </div>
-        </div>
-        <div class="point-1 flex gap-[52px]">
-          <div class="left-side text-[52px] overflow-y-hidden shrink-0">
-            <p>01</p>
-            <div class="line-wrapper w-full h-full">
-              <div class="line w-[12px] h-full bg-black ml-auto"></div>
-            </div>
-          </div>
-          <div class="right-side">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex ea consequatur? Aut ea saepe dolorem, nulla debitis omnis culpa quos. Optio eos velit corporis neque, non nemo architecto ipsa laudantium, at vel eum aliquam sequi! Velit, porro qui explicabo numquam animi illo eum rerum ea ipsam neque magni blanditiis ab vero quas saepe ut mollitia veniam dolore. Laborum temporibus earum autem in eos architecto est maxime porro tenetur nihil voluptas alias vel veritatis ab eum optio odio, repudiandae nulla molestias magnam cupiditate, quae esse. Ad exercitationem, cum porro qui aut, nam minima odit amet dolore consequuntur eveniet quidem velit explicabo! Ea incidunt deleniti repellat eaque quidem eveniet quisquam. Nulla fuga commodi fugiat totam cupiditate corporis necessitatibus qui laborum enim, rem facilis odit, minima eaque autem nobis magnam a sunt. Iste laborum a recusandae ea consectetur illum suscipit corporis ab, ullam praesentium pariatur quisquam itaque hic officiis magni dolore. Similique, dolorum deleniti! Ullam quam corporis voluptas consequuntur odio aliquam dolores harum quod enim natus commodi tempora fugit eos atque neque, voluptates ad assumenda porro iusto rerum sed sit nam! Numquam exercitationem facilis, officiis maxime et cumque molestias assumenda dolore, adipisci autem maiores doloremque tempora doloribus sequi architecto dolorum! Dignissimos quae culpa, saepe cupiditate quaerat amet recusandae nulla officiis sit quia eveniet maxime natus itaque dolorem, totam nisi atque cum debitis doloribus voluptas consectetur vitae esse nemo. Illo corrupti amet aliquam fuga iusto blanditiis officia dolores. Cum deleniti architecto nesciunt dolorem unde! Distinctio dolor minima harum ducimus voluptate et voluptates unde modi labore! Ea saepe possimus temporibus odio commodi repellendus nulla provident ex cupiditate, est quisquam doloribus ullam sint dolore, velit sed voluptates voluptatum pariatur suscipit laboriosam repudiandae qui. Nesciunt
-            laudantium quis distinctio nostrum, tenetur blanditiis? Temporibus fugit adipisci ipsum ab veritatis quas excepturi iure! Temporibus exercitationem esse sit quisquam est molestiae corporis doloribus, tempore perferendis? Sit earum ipsum magnam molestiae! Ea explicabo possimus repellendus provident molestias dolor inventore consequuntur suscipit nulla nisi fugiat perferendis minus odio dolorem eos quas modi doloremque, optio quam officia natus. Modi dolores repellendus error perspiciatis adipisci rerum voluptate eaque sint, quia ipsam voluptatum autem, explicabo, quos odio. Adipisci voluptatem officiis debitis animi iure quibusdam aut? Magnam, dignissimos omnis beatae possimus quo perferendis quos porro culpa sequi eligendi? Laborum exercitationem possimus beatae, sequi quas et blanditiis doloribus voluptas iusto reiciendis similique aut excepturi magni molestiae minus consectetur itaque? Optio, molestias, suscipit, porro quo aspernatur vero fugit ratione explicabo magnam qui quasi animi esse voluptates iure! Veritatis, sequi! Sit nostrum ipsa odio quidem dolor. Rem autem cupiditate aut ipsum nesciunt earum ratione vero vitae aliquam! Minima suscipit impedit magnam aperiam vitae numquam voluptate. Optio aspernatur eum nam ipsam suscipit est nisi! Officia, aliquid iste, quidem modi labore pariatur temporibus error debitis saepe ipsam incidunt, in mollitia dolorem voluptas? Perspiciatis sed nostrum, quasi voluptatum eum veniam autem. Necessitatibus assumenda aut, velit voluptatum suscipit qui soluta alias! Sunt id eveniet unde nostrum voluptatibus nisi dignissimos aliquam dolores dolorum ducimus. Adipisci sequi excepturi veniam beatae recusandae eligendi obcaecati, aliquid soluta.
-          </div>
-        </div>
-      </div>
-    </section>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
